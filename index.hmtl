@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuba Rações - Adoção e Doação</title>
+ 
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Canil da Cidade</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#adocao">Adoção</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#doacao">Doação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#admin">Painel Administrativo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1>Bem-vindo ao Canil da Cidade</h1>
+      <p>Adote, doe e ajude a transformar a vida dos animais!</p>
+    </div>
+  </header>
+
+  <!-- Listagem de Animais para Adoção -->
+  <section id="adocao" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Animais Disponíveis para Adoção</h2>
+      
+      <!-- Filtros de Busca -->
+      <form class="mb-4">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Busca por nome, raça...">
+          </div>
+          <div class="col-md-4">
+            <select class="form-select">
+              <option value="">Filtrar por idade</option>
+              <option value="1">Filhote</option>
+              <option value="2">Adulto</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Cards dos Animais -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card animal-card">
+            <img src="animal1.jpg" class="card-img-top" alt="Animal 1">
+            <div class="card-body">
+              <h5 class="card-title">Max</h5>
+              <p class="card-text">Raça: Labrador | Idade: 2 anos | Sexo: Macho</p>
+              <button class="btn btn-adotar w-100">Adotar</button>
+            </div>
+          </div>
+        </div>
+        <!-- Outros animais podem ser listados aqui usando o mesmo layout -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Doação -->
+  <section id="doacao" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Contribua com o Canil</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Nome">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Valor da Doação">
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-doar w-100">Doar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Painel Administrativo Básico -->
+  <section id="admin" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Painel Administrativo</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Nome do Animal</th>
+              <th>Raça</th>
+              <th>Idade</th>
+              <th>Sexo</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Max</td>
+              <td>Labrador</td>
+              <td>2 anos</td>
+              <td>Macho</td>
+              <td>
+                <button class="btn btn-warning btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Remover</button>
+              </td>
+            </tr>
+            <!-- Outros registros podem ser listados aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="py-3">
+    <p>© 2024 Cuba Rações. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
