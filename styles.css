@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Cores principais */
+:root {
+  --primary-color: #1e90ff; /* Azul principal */
+  --secondary-color: #4f94d4; /* Azul secundário */
+  --background-light: #f0f8ff; /* Fundo claro */
+  --text-dark: #2a2a2a; /* Texto escuro */
+  --btn-adotar: #007bff; /* Botão de adoção */
+  --btn-doar: #ffc107; /* Botão de doação */
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #f0f8ff !important;
+}
+
+.nav-link:hover {
+  color: #d9eaff !important;
+}
+
+/* Banner Inicial */
+header {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+/* Seção de Adoção */
+section {
+  padding: 50px 0;
+}
+
+#adocao h2, #doacao h2, #admin h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Filtros de Busca */
+form .form-control, .form-select {
+  border: 1px solid var(--primary-color);
+}
+
+form .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Cards de Animais */
+.animal-card {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.animal-card .card-title {
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.animal-card .card-text {
+  color: var(--text-dark);
+}
+
+.btn-adotar {
+  background-color: var(--btn-adotar);
+  color: white;
+  border: none;
+}
+
+.btn-adotar:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Formulário de Doação */
+#doacao {
+  background-color: var(--background-light);
+}
+
+#doacao .form-control {
+  border: 1px solid var(--secondary-color);
+}
+
+#doacao .btn-doar {
+  background-color: var(--btn-doar);
+  border: none;
+  color: #2a2a2a;
+}
+
+#doacao .btn-doar:hover {
+  background-color: #e0a800;
+}
+
+/* Painel Administrativo */
+#admin table {
+  border: 1px solid var(--primary-color);
+}
+
+#admin th {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+#admin td {
+  text-align: center;
+}
+
+#admin .btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #2a2a2a;
+}
+
+#admin .btn-warning:hover {
+  background-color: #e0a800;
+}
+
+#admin .btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+#admin .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9em;
+  margin: 0;
+}
