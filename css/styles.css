@@ -1,174 +1,111 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* Cores principais */
+/* Definindo cores principais */
 :root {
-  --primary-color: #1e90ff; /* Azul principal */
-  --secondary-color: #4f94d4; /* Azul secundário */
-  --background-light: #f0f8ff; /* Fundo claro */
-  --text-dark: #2a2a2a; /* Texto escuro */
-  --btn-adotar: #007bff; /* Botão de adoção */
-  --btn-doar: #ffc107; /* Botão de doação */
+    --primary-color: #007bff;  /* Azul principal */
+    --secondary-color: #f8f9fa;  /* Branco para o fundo */
+    --text-color: #333333;      /* Cor do texto */
+    --button-hover: #0056b3;    /* Azul mais escuro para hover */
 }
 
-/* Navbar */
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegação */
 .navbar {
-  background-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
-.navbar-brand {
-  font-weight: bold;
-  color: #fff !important;
-}
-
-.nav-link {
-  color: #f0f8ff !important;
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: bold;
 }
 
 .nav-link:hover {
-  color: #d9eaff !important;
+    color: #ffffff !important;
+    text-decoration: underline;
 }
 
-/* Banner Inicial */
-header {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  padding: 50px 0;
-  text-align: center;
+/* Estilos do contêiner principal */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+/* Títulos */
+h1, h2, h3 {
+    color: var(--primary-color);
 }
 
-header p {
-  font-size: 1.2em;
+/* Botões */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease;
 }
 
-/* Seção de Adoção */
-section {
-  padding: 50px 0;
+.btn-primary:hover {
+    background-color: var(--button-hover);
+    border-color: var(--button-hover);
 }
 
-#adocao h2, #doacao h2, #admin h2 {
-  color: var(--primary-color);
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
+/* Formulários */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-/* Filtros de Busca */
-form .form-control, .form-select {
-  border: 1px solid var(--primary-color);
-}
-
-form .btn-primary {
-  background-color: var(--primary-color);
-  border: none;
-}
-
-form .btn-primary:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Cards de Animais */
-.animal-card {
-  border: 1px solid var(--primary-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.animal-card img {
-  height: 200px;
-  object-fit: cover;
-}
-
-.animal-card .card-title {
-  font-size: 1.5em;
-  color: var(--primary-color);
-}
-
-.animal-card .card-text {
-  color: var(--text-dark);
-}
-
-.btn-adotar {
-  background-color: var(--btn-adotar);
-  color: white;
-  border: none;
-}
-
-.btn-adotar:hover {
-  background-color: var(--secondary-color);
-}
-
-/* Formulário de Doação */
-#doacao {
-  background-color: var(--background-light);
-}
-
-#doacao .form-control {
-  border: 1px solid var(--secondary-color);
-}
-
-#doacao .btn-doar {
-  background-color: var(--btn-doar);
-  border: none;
-  color: #2a2a2a;
-}
-
-#doacao .btn-doar:hover {
-  background-color: #e0a800;
-}
-
-/* Painel Administrativo */
-#admin table {
-  border: 1px solid var(--primary-color);
-}
-
-#admin th {
-  background-color: var(--primary-color);
-  color: #fff;
-  text-align: center;
-}
-
-#admin td {
-  text-align: center;
-}
-
-#admin .btn-warning {
-  background-color: #ffc107;
-  border: none;
-  color: #2a2a2a;
-}
-
-#admin .btn-warning:hover {
-  background-color: #e0a800;
-}
-
-#admin .btn-danger {
-  background-color: #dc3545;
-  border: none;
-}
-
-#admin .btn-danger:hover {
-  background-color: #c82333;
+.form-group label {
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 /* Rodapé */
 footer {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  padding: 20px 0;
-  text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-  font-size: 0.9em;
-  margin: 0;
+/* Links em geral */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--button-hover);
+    text-decoration: none;
+}
+
+/* Tabelas */
+.table {
+    margin-top: 20px;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9f3ff;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 15px;
+    }
 }
